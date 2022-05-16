@@ -2,6 +2,7 @@ package main
 
 import (
 	"deribee/pkg/auth"
+	"deribee/pkg/trade"
 	"log"
 	"os"
 
@@ -21,4 +22,5 @@ func main() {
 	}
 
 	auth.Auth(conn)
+	trade.BuyLimit(conn)
 }

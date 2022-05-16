@@ -13,7 +13,7 @@ import (
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("Error loading .env file. Please, check if you have it")
+		log.Fatal("Error loading .env file. Please, check if you have renamed your .env.example")
 	}
 
 	conn, _, err := websocket.DefaultDialer.Dial(os.Getenv("URL"), nil)

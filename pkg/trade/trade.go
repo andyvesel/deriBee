@@ -74,10 +74,13 @@ func GetIndexPrice(conn *websocket.Conn) float32 {
 	return float
 }
 
+func EditOrder(conn *websocket.Conn) {
+
+}
+
 func BuyLimit(conn *websocket.Conn) {
 	// adding 1000 to the actual price, in order to set buyLimit order
 	// always near the actual price edge (PostOnly should be ALWAYS set to true)
-	// t := time.Now().UnixNano()
 	price := int32(GetIndexPrice(conn)) + 1000
 	message := Message{
 		jsonData{
